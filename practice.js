@@ -2,18 +2,23 @@
   // 1) What is the purpose of the 'this keyword'?
 
       //Answer
+      //to refer to a function or an object that a function is a method of ---that we are trying to execute
 
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
+      //explicit, implicit, global/window, new constructor
 
   // 3) What is the difference between call and apply?
 
       //Answer
+      //for call you can pass argument for 'this' seperated by commas
+      //while apply you need to pass arguments as arrays
 
   // 4) What does .bind do?
 
       //Answer
+      //bind explicitly bind a new function to and object which holds 'this' value
 
 
 //Next Problem
