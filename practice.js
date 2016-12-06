@@ -2,14 +2,14 @@
   // 1) What is the purpose of the 'this keyword'?
 
       //Answer
-      // to refer to the context in which its beeing invoked: meaning if its poiting to an object, construtor, or function
+      // to refer to the context in which its being invoked: meaning if its poiting to an object, construtor, or function
 
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
       // implicet: meaning to the left side its being invoked
       // explicit: by .call .apply or .bind
-      // new keyworkd: when making a constructor
+      // new keyworkd: when making object with a constructor, this refer to the object generated
       // default: when no implicit or explicit is definced it goes to the root -window
 
   // 3) What is the difference between call and apply?
@@ -20,7 +20,7 @@
   // 4) What does .bind do?
 
       //Answer
-      // it binds or give conxtext to the .this based on its passed argument then create a new function to be used with that bound context
+      // it binds a function or give conxtext to it indefinetly. the .this based on its passed argument then create a new function to be used with that bound context
 
 
 //Next Problem
@@ -91,7 +91,7 @@ var getMyUsername = function() {
  return this.username;
 };
 
-var userName = getMyUsername.call(myUser); //Fix this
+var userName = getMyUsername(); //Fix this
 
 //Above you're given an object, a function, and a setTimeout invocation. After 5 seconds, what will the getUsername function return?
 //Note(no tests)
@@ -104,3 +104,4 @@ var userName = getMyUsername.call(myUser); //Fix this
   // it is bound to the window
 
 //Fix the getMyUsername invocation so that userName will be equal to 'iliketurtles'.
+var userName = getMyUsername.call(myUser)
