@@ -40,13 +40,21 @@
     }
 
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
-
+user.getUsername();
 
 //Next Problem
 
 
 // Write the function definitions which will make the following function invocations function properly.
-
+function Car(make, model, year, move) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.move = move;
+  this.moveCar = function () {
+    return this.move += 10;
+  }
+}
   //Function Invocations Here
 
 var prius = new Car('Toyota', 'Prius', 2011);
@@ -69,8 +77,8 @@ var getYear = function(){
 
 //Note(no tests)
   //Code Here
-
-
+getYear.call(prius);
+getYear.call(prius);
 //New Problem
 
 var myUser = {
@@ -83,14 +91,16 @@ var getMyUsername = function() {
  return this.username;
 };
 
-var userName = getMyUsername(); //Fix this
+var userName = getMyUsername.call(myUser); //Fix this
 
 //Above you're given an object, a function, and a setTimeout invocation. After 5 seconds, what will the getUsername function return?
 //Note(no tests)
   //Answer Here
+  //it will return undefined
 
 //In the example above, what is the 'this keyword' bound to when getUsername runs?
 
   //Answer Here
+  // it is bound to the window
 
 //Fix the getMyUsername invocation so that userName will be equal to 'iliketurtles'.
