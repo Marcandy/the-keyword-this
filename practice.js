@@ -2,18 +2,25 @@
   // 1) What is the purpose of the 'this keyword'?
 
       //Answer
+      // to refer to the context in which its beeing invoked: meaning if its poiting to an object, construtor, or function
 
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
+      // implicet: meaning to the left side its being invoked
+      // explicit: by .call .apply or .bind
+      // new keyworkd: when making a constructor
+      // default: when no implicit or explicit is definced it goes to the root -window
 
   // 3) What is the difference between call and apply?
 
       //Answer
+      // About the same though apply accept array of arguments, while apply single argument
 
   // 4) What does .bind do?
 
       //Answer
+      // it binds or give conxtext to the .this based on its passed argument then create a new function to be used with that bound context
 
 
 //Next Problem
